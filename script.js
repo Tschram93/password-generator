@@ -27,7 +27,20 @@ generateEl.addEventListener('click', () => {
   const checkedLower = lowercase.checked;
   const checkedSpecial = special.checked;
   const checkedNumber = number.checked;
-})
+  password.innerText = generatePassword(checkedUpper, checkedLower, checkedNumber, checkedSpecial);
+});
+
+// Generate Password function
+function generatePassword(lower, upper, number, special, length) {
+  // filter out unchecked(false) types
+  // loop over length for each type
+  // add final password 
+  let generatedPassword = '';
+
+  const typesCount = lower + upper + number + special;
+  console.log('typesCount: ', typesCount);
+};
+
 // I am using the character code numbers listed from https://www.w3schools.com/charsets/ref_html_ascii.asp
 
 function uppercaseRandom() {
