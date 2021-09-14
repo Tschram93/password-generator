@@ -22,12 +22,13 @@ var generateEl = document.getElementById("generate");
 // Adding eventlistener to the generate password button
 generateEl.addEventListener('click', () => {
   const length = +lengthEl.value;
-  console.log(typeof length);
+  // console.log(length);
   const checkedUpper = uppercase.checked;
   const checkedLower = lowercase.checked;
   const checkedSpecial = special.checked;
   const checkedNumber = number.checked;
-  password.innerText = generatePassword(checkedUpper, checkedLower, checkedNumber, checkedSpecial);
+
+  password.innerText = generatePassword(checkedUpper, checkedLower, checkedNumber, checkedSpecial, length);
 });
 
 // Generate Password function
@@ -38,8 +39,36 @@ function generatePassword(lower, upper, number, special, length) {
   let generatedPassword = '';
 
   const typesCount = lower + upper + number + special;
-  console.log('typesCount: ', typesCount);
+  // console.log('typesCount: ', typesCount);
+  const typesArray = [{
+    lower
+  }, {
+    upper
+  }, {
+    number
+  }, {
+    special
+  }].filter(
+    item => Object.values(item)[0]);
+
+  if (typesCount === 0) {
+    return '';
+  }
+
+  for (let i = 0; i < length; i += typesCount) {
+    typesArray.forEach(type => {
+      const functionName = Object.keys(type)[0];
+
+      generatedPassword += randomFunction[functionName]();
+    });
+  }
+  const thePassword = generatedPassword.slice(0, length);
+  return thePassword;
+
 };
+
+
+// alert = "You must select at least one box."
 
 // I am using the character code numbers listed from https://www.w3schools.com/charsets/ref_html_ascii.asp
 
