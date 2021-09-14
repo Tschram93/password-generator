@@ -1,20 +1,33 @@
-//This is my third attempt at this assignment. The last one went horribly, horribly wrong; I will attach my original code at the bottom of this one for you to judge.
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+const randomFunction = {
+  lower: lowercaseRandom,
+  upper: uppercaseRandom,
+  number: numberRandom,
+  special: specialRandom
+};
 
 
 // Add event listener to generate button
 
 
-//Calling the checkboxes 
+// Establishing variables for DOM Elements 
 var uppercase = document.querySelector('.upper');
-
 var lowercase = document.querySelector('.lower');
 var special = document.querySelector('.spec');
 var number = document.querySelector('.number');
+var lengthEl = document.getElementById('charLength');
+// password is the location where I want the output
 var password = document.querySelector("#password");
-// var btn = document.querySelector("#generate");
-// console.log(passwordEl)
+var generateEl = document.getElementById("generate");
+
+// Adding eventlistener to the generate password button
+generateEl.addEventListener('click', () => {
+  const length = +lengthEl.value;
+  console.log(typeof length);
+  const checkedUpper = uppercase.checked;
+  const checkedLower = lowercase.checked;
+  const checkedSpecial = special.checked;
+  const checkedNumber = number.checked;
+})
 // I am using the character code numbers listed from https://www.w3schools.com/charsets/ref_html_ascii.asp
 
 function uppercaseRandom() {
@@ -36,4 +49,4 @@ function specialRandom() {
   const special = '!#$%&()*+,-./:;><=?@[]^_`~|{}';
   return special[Math.floor(Math.random() * special.length)]
 }
-console.log(specialRandom());
+// console.log(specialRandom());

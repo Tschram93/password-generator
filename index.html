@@ -25,9 +25,8 @@
       </div>
       <div class="card-footer">
         <br>
-        <div> Password length:
-          <input id="charlength" type="text" placeholder="Enter # between 8-16">
-        </div>
+        <label for="charLength"> Password length: </label>
+        <input id="charLength" type="text" min="4" max="16" value="16" placeholder="Enter # between 8-16">
         <button id="generate" class="btn">Generate Password</button>
         <!--  Added Checkboxes for special characters, uppercase, lowercase -->
         <section class="flexbox" class="checkboxes">
