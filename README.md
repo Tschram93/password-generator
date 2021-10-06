@@ -1,22 +1,24 @@
 # Password Generator
 
 ![Image of application](passwordPreview.JPG)
-
-## Description:
-
+            
+## Link:
+https://tschram93.github.io/password-generator/
+## Description: 
 This website application is used to create a unique password that is determined
-by a user selecting the criteria of a desired password.
 
-### Instructions:
+## Instructions: 
+First the user will enter a number between 8-16 into the password length input box. The user will then click at least one of checkboxes for the selections of `Uppercase`, `Lowercase`, `Number`, or `Special Characters.` After the user has completed checking boxes of desired characters and entering a number between 8-16 into the password length box, they will click the `Generate Password` button. The user will then be able copy the password that will be generated into the `Secure Password` box nd then paste/write it into their desired field.
 
-- The user will enter a number between 8-16 in the password length input box.
+## Dependencies
+No dependencies are required for this application.
 
-- The user will click the check boxes of at least one of selections of
-  "Uppercase", "Lowercase","Number", or "Special Characters"
+## Testing
+There are no tests necessary for this application.
 
-* After the user has completed inputting a number into the password length and
-  checking the boxes of desired characters, they will click the "Generate
-  Password" button.
+### License
+There was not a licensed used for this application.
 
-* The user will then be able to copy the password that will be generated into
-  "Secure Password" box and paste/write it into their desired input field.
+### Contact Information
+* [Github](https://github.com/TSchram93)
+* Email:  Tschram93@gmail.com
