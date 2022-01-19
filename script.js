@@ -68,8 +68,6 @@ function generatePassword(lower, upper, number, special, length) {
 };
 
 
-// alert = "You must select at least one box."
-
 // I am using the character code numbers listed from https://www.w3schools.com/charsets/ref_html_ascii.asp
 
 function uppercaseRandom() {

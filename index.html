@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Password Generator</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <div class="wrapper">
-    <header>
-      <!-- input -->
-      <h1>Password Generator</h1>
-      <!-- input in this or .card -->
-    </header>
-    <div class="card">
-      <div class="card-header">
-        <h2 style="text-align: center">Generate a Password</h2>
-      </div>
-      <div class="card-body">
-        <textarea id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
-      </div>
-      <div class="card-footer">
-        <br>
-        <label for="charLength"> Password length: </label>
-        <input id="charLength" type="text" min="4" max="16" value="16" placeholder="Enter # between 8-16">
-        <button id="generate" class="btn">Generate Password</button>
-        <!--  Added Checkboxes for special characters, uppercase, lowercase -->
-        <section class="flexbox" class="checkboxes">
-          Uppercase: <input type="checkbox" class="upper" />
-          Lowercase: <input type="checkbox" class="lower" />
-          Number: <input type="checkbox" class="number" />
-          Special Characters: <input type="checkbox" class="spec" />
-        </section>
-        <!--  -->
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+	<body>
+		<div class="wrapper">
+			<header>
+				<!-- input -->
+				<h1>Password Generator</h1>
+				<!-- input in this or .card -->
+			</header>
+			<div class="card">
+				<div class="card-header">
+					<h2 style="text-align: center">Generate a Password</h2>
+				</div>
+				<div class="card-body">
+					<textarea
+						id="password"
+						placeholder="Your Secure Password"
+						aria-label="Generated Password"
+					></textarea>
+				</div>
+				<div class="card-footer">
+					<br />
+					<label for="charLength"> Password length: </label>
+					<input
+						id="charLength"
+						type="text"
+						min="4"
+						max="16"
+						value="16"
+						placeholder="Enter # between 8-16"
+					/>
+					<button id="generate" class="btn">Generate Password</button>
+					<!--  Added Checkboxes for special characters, uppercase, lowercase -->
+					<section class="flexbox" class="checkboxes">
+						Uppercase: <input type="checkbox" class="upper" /> Lowercase:
+						<input type="checkbox" class="lower" /> Number:
+						<input type="checkbox" class="number" /> Special Characters:
+						<input type="checkbox" class="spec" />
+					</section>
+					<!--  -->
+				</div>
+			</div>
+		</div>
+		<footer class="container">
+			<div class="contact-box">
+				<h4 class="contact-text">
+					Web Application <br />
+					by <br />
+					Travis Schram
+				</h4>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
 </html>

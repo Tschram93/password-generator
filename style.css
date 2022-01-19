@@ -4,12 +4,24 @@
 	box-sizing: border-box;
 }
 
+header {
+	background-color: #970C10;
+	margin-top: -50px;
+	margin-bottom: 30px;
+}
+
+h1 {
+	color: #738580;
+	padding-top: 35px;
+}
+
 html,
 body,
 .wrapper {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 body {
@@ -30,6 +42,13 @@ header {
 	color: hsl(206, 17%, 28%);
 }
 
+
+.contact-text {
+	color: #BFCAD0;
+	border: 2px solid #738580;
+	border-radius: 10%;
+	padding: 15px 15px;
+}
 /* Added Checkboxes for special characters, uppercase, lowercase */
 .checkboxes {
 	display: block;
@@ -77,6 +96,19 @@ header {
 	clear: both;
 }
 
+.contact-box {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	text-align: center;
+}
+
+.container {
+	background-color: #474440;
+	position: absolute;
+	width: 100vw;
+}
+
 .btn {
 	border: none;
 	background-color: hsl(360, 91%, 36%);
@@ -105,6 +137,10 @@ button[disabled] {
 
 .float-right {
 	float: right;
+}
+
+.footer {
+	position: fixed;
 }
 
 #password {
